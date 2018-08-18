@@ -1,3 +1,4 @@
+include includes/myvariables
 html
 	head
 		include includes/styles.pug
@@ -12,5 +13,29 @@ html
 					tous ça est aussin un paragraph
 			// commentaie 
 			//- hide comment
-			
+				multi line comment
+			// first line 
+				second line 
+				this is multi line comments
+			div
+				- var className = "font"
+				div(class='the name is '+className+' '+className2)
+				//- this var is by javascript
+		p this is text1 
+			strong bold
+		p this is text2 <strong>bold</strong>
+		p= 'this is text3 <strong>bold</strong>'
 
+		div this is another div
+		//- this is for loop
+		ul
+			-for (var i = 0; i <10; i++) 
+				li item number #{i}
+		//- this is while loop
+
+		- var z = 0
+		ul
+			while z < 10
+				li= z++
+
+			
